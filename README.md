@@ -20,5 +20,6 @@ Developed in 2019 as a demonstration of creating maps using D3. Examines the NYC
 ### Global CO2 emissions maps
 [View repo](https://github.com/jpcaltabiano/04-Remix)\
 [View site](https://jpcaltabiano.github.io/04-Remix/)
+
 Developed in 2019 as a demonstration of creating maps using D3. Also uses GeoJSON data to generate the map, and explores spatial data showing the carbon emissions in total and per capita across the world. A slider allows for examining data trends across time.
 
