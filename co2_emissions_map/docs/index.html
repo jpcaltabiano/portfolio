@@ -1,0 +1,26 @@
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://d3-legend.susielu.com/d3-legend.min.js"></script>
+<script src="https://unpkg.com/topojson@3"></script>
+<script src="https://unpkg.com/d3-simple-slider"></script></script>
+<script src='js/map.js'></script>
+<script src='js/charts.js'></script>
+<link href='css/styles.css' rel='stylesheet' type='text/css'></style>
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> 
+
+<body>
+	<div id='titles_div'>
+		<h2 id='title'>Total Emissions per Country in Kilotons</h2>
+		<h4 id='chart_title'>World</h4>
+	</div>
+	<div id='vis_space'>
+  	<input type='button' class='center_btn'></input>
+		<svg id='map_svg'></svg>
+		<svg id='charts_container'></svg>
+		<svg id='controls_svg'></svg>
+  </div>
+  <div class='d3-slider'></div>
+</body>
+
+<script>
+  visualization();
+</script>

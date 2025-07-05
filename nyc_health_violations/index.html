@@ -1,0 +1,100 @@
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://unpkg.com/topojson@3"></script>
+<script src="https://d3-legend.susielu.com/d3-legend.min.js"></script>
+<script src="js/mapcontrols.js"></script>
+<script src="js/map.js"></script>
+<script src="js/fastfood.js"></script>
+<script src="js/categoryData.js"></script>
+<link href='css/styles.css' rel='stylesheet' type='text/css'></link>
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+<head></head>
+<body>
+	<div id='map'>
+		<svg id='map_svg'></svg>
+		<!--svg id='map_controls_svg'></svg-->
+	</div>
+	<div id="charts">
+		<svg id='fastfood_svg'></svg>
+		<div id='categoryDiv'>
+			<svg id="categoryData"></svg>
+			<select id="categoryDisplay" onchange="updateCategoryData()">
+				<option value="Score">Average Score per Restaurant Category</option>
+				<option value="Violations">Critical Violations Per Inspection</option>
+			</select>
+			<div id="ScoreTooltip" class="tooltip">&#9432;
+				<span class="tooltiptext">Score is based on the number of violations found. The lower the score, the better</span>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<script>
+	map();
+	// Fast food stuff
+	var fastFoodFormat = {
+		svg: 0,
+		margin: 0,
+		width: 946,
+		height: 471
+	};
+	fastFoodFormat.margin = {
+		top: 20,
+		right: 30,
+		bottom: 80,
+		left: 50
+	};
+	fastFoodFormat.svg = d3.select("#fastfood_svg")
+		.attr('preserveAspectRatio', 'xMinYMin meet')
+		.attr('viewBox', '0 0 ' + fastFoodFormat.width + ' ' + fastFoodFormat.height)
+		//.attr("width", 700 + fastFoodFormat.margin.left + fastFoodFormat.margin.right)
+		//.attr("height", 500 + fastFoodFormat.margin.top + fastFoodFormat.margin.bottom)
+	//fastFoodFormat.width = +fastFoodFormat.svg.attr("width") - fastFoodFormat.margin.left - fastFoodFormat.margin.right;
+	//fastFoodFormat.height = +fastFoodFormat.svg.attr("height") - fastFoodFormat.margin.top - fastFoodFormat.margin.bottom;
+	fastFoodChart(fastFoodFormat);
+
+	// Category data
+	function updateCategoryData() {
+		var display = 'score';
+		var tooltip = document.getElementById("ScoreTooltip");
+
+		if(document.getElementById("categoryDisplay").value === "Score"){
+			display = 'score';
+			tooltip.style.display = "";
+		}
+		if(document.getElementById("categoryDisplay").value === "Violations"){
+			display = 'violations';
+			tooltip.style.display = "none";
+		}
+
+		var categoryDataFormat = {
+			svg: 0,
+			margin: 0,
+			width: 946,
+			height: 471
+		};
+		categoryDataFormat.margin = {
+			top: 20,
+			right: 30,
+			bottom: 38,
+			left: 60
+		};
+
+		d3.select("#categoryData").select("svg").remove();
+
+		categoryDataFormat.svg = d3.select("#categoryData").append("svg")
+			//.attr('id', 'categoryData_svg')
+			.attr('preserveAspectRatio', 'xMinYMin meet')
+			.attr('viewBox', '0 0 ' + categoryDataFormat.width + ' ' + categoryDataFormat.height)
+			//.attr("width", 700 + categoryDataFormat.margin.left + categoryDataFormat.margin.right)
+			//.attr("height", 500 + categoryDataFormat.margin.top + categoryDataFormat.margin.bottom);
+
+		//categoryDataFormat.width = +categoryDataFormat.svg.attr("width") - categoryDataFormat.margin.left - categoryDataFormat.margin.right;
+		//categoryDataFormat.height = +categoryDataFormat.svg.attr("height") - categoryDataFormat.margin.top - categoryDataFormat.margin.bottom;
+
+		categoryChart(categoryDataFormat, display);
+	}
+	// Call this initally at start
+	updateCategoryData();
+</script>

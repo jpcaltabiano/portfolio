@@ -1,0 +1,12 @@
+﻿category,scoresum,total,AvgScore,CriticalCategory,CriticalNum,numcrit,crittotal,superlativeCategory,bestBoroScore,worstBoroScore,bestBoroCrit,worstBoroCrit
+indian,167891,7504,22.37353412,indian,0.589685501,4425,7504,african,Manhatten,Queens,Queens,Bronx
+african,49201,2235,22.01387025,asian,0.577371003,42834,74188,american,Queens,Staten Island,Bronx,Staten Island
+seafood,59654,2926,20.38755981,latin,0.560807155,35240,62838,asian,Bronx,Manhatten,Bronx,Staten Island
+asian,1504330,74188,20.27726856,african,0.554362416,1239,2235,bakery,Staten Island,Brooklyn,Manhatten,Queens
+latin,1273345,62838,20.26393265,european,0.552028321,19024,34462,comfort food,Bronx,Staten Island,Bronx,Staten Island
+middle-east,89654,4754,18.85864535,comfort food,0.542854527,17785,32762,european,Queens,Bronx,Queens,Staten Island
+european,624394,34462,18.11833324,american,0.537142755,60030,111758,health,Queens,Staten Island,Brooklyn,Staten Island
+comfort food,592642,32762,18.08931079,seafood,0.534518113,1564,2926,indian,Staten Island,Brooklyn,Bronx,Queens
+american,1978919,111758,17.7071798,middle-east,0.529028187,2515,4754,latin,Staten Island,Brooklyn,Staten Island,Bronx
+health,142059,8125,17.48418462,health,0.528615385,4295,8125,middle-east,Bronx,Queens,Staten Island,Manhatten
+bakery,677034,41145,16.45483048,bakery,0.516271722,21242,41145,seafood,Bronx,Brooklyn,Staten Island,Manhatten

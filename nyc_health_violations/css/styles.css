@@ -1,0 +1,116 @@
+body {
+  align-items: stretch;
+  font-family: 'Nunito', sans-serif;
+}
+
+#map {
+  align-items: flex-start;
+  width: 50%;
+  height: calc(100vw - (100vw - 100%));
+  float: left;
+}
+
+#charts {
+  align-items: flex-start;
+  width: 50%;
+  height: calc(100vw - (100vw - 100%));
+  float: right;
+}
+
+#map_svg {
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+#map_controls_svg {
+  height: 100px;
+  width: 100px;
+}
+
+#fastfood_svg {
+  width: 100%;
+  height: 50%;
+
+}
+
+#categoryDiv {
+  width: 50vw;
+  height: 50%;
+  float: right;
+}
+
+#categoryData {
+  width: 100%;
+  height: 100%;
+}
+
+#categoryDisplay {
+  position: relative;
+  top: -100%;
+  left: calc(50% - 128px);
+  z-index: 2;
+  width: auto;
+  height: auto;
+}
+
+.select {
+  font-size: 16px;
+}
+
+div.charts {
+    align-items: flex-end;
+    width: 100vw;
+}
+
+div.map_tooltip { 
+    position: absolute;     
+    text-align: center;
+    min-width: 60px;     
+    width: auto;          
+    height: auto;         
+    padding: 2px;       
+    font-size: 85%;    
+    background: lightsteelblue; 
+    border: 0px;    
+    border-radius: 8px;     
+    pointer-events: none;     
+}
+
+/*#categorySelect{
+  position:absolute;
+  width:160px;
+  right:180px;
+}*/
+div.tooltip {
+  position: relative;
+  top: -100%;
+  left: 38%;
+  z-index: 2;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+div.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 8px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.fastfood_g {
+  justify-content: center;
+}
+
+text.label {
+  fill: #fff
+}

@@ -1,0 +1,116 @@
+body {
+  background-color: #fff;
+  font-family: 'Nunito', sans-serif;
+}
+
+h2 { 
+  text-align: center;
+  width: 70vw;
+  height: 0vh;
+  float: left;
+}
+
+h4 {
+  position: relative;
+  top: 15px;
+  margin-left: 10px;
+  text-align: center;
+  width: 28vw;
+  height: 0vh;
+  float: right;
+}
+
+#titles_div {
+  clear: both;
+}
+
+#vis_space {
+  align-items: flex-start;
+  width: 100vw;
+  height: 35vw;
+  position: relative;
+}
+
+#map_svg {
+	width: 70vw;
+	height: 35vw;
+  float: left;
+}
+
+#charts_container {
+  width: 28vw;
+  height: 17.5vw;
+  float: right;
+}
+
+#controls_svg {
+  width: 28vw;
+  height: 17.5vw;
+  float: right;
+}
+
+.center_btn {
+  position: relative;
+  top: 4.3%;
+  left: 2vw;
+  z-index: 2;
+  width: 6%;
+  height: 4.3%;
+}
+
+.d3-slider {
+  width: 70vw;
+  height: 10px;
+}
+
+.ticks {
+  font: 10px sans-serif;
+}
+
+.track,
+.track-inset,
+.track-overlay {
+  stroke-linecap: round;
+}
+
+.track {
+  stroke: #000;
+  stroke-opacity: 1;
+  stroke-width: 10px;
+}
+
+.track-inset {
+  stroke: #fff;
+  stroke-width: 8px;
+}
+
+.track-overlay {
+  pointer-events: stroke;
+  stroke-width: 50px;
+}
+
+.handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: 0.5;
+  stroke-width: 1.25px;
+}
+
+div.tooltip { 
+    position: absolute;     
+    text-align: center;
+    min-width: 60px;     
+    width: auto;          
+    height: auto;         
+    padding: 2px;       
+    font-size: 85%;    
+    background: lightsteelblue; 
+    border: 0px;    
+    border-radius: 8px;     
+    pointer-events: none;     
+}
+
+.label {
+  font-size: 85%; 
+  font-weight: light;
+}
