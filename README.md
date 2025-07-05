@@ -12,13 +12,11 @@ Work done for Earth Genome in the second half of 2024, in partnership with Conse
 ## Academic front-end mapping tools (JavaScript, D3, GeoJSON)
 
 ### NYC Health violations map
-[View repo](https://github.com/jpcaltabiano/final)\
 [View site](https://jpcaltabiano.github.io/final//)
 
 Developed in 2019 as a demonstration of creating maps using D3. Examines the NYC health violations data at different levels across the city. GeoJSON is used to generate the map, and D3 with vanilla JS are used to compute data across different aggregations across the map.
 
 ### Global CO2 emissions maps
-[View repo](https://github.com/jpcaltabiano/04-Remix)\
 [View site](https://jpcaltabiano.github.io/04-Remix/)
 
 Developed in 2019 as a demonstration of creating maps using D3. Also uses GeoJSON data to generate the map, and explores spatial data showing the carbon emissions in total and per capita across the world. A slider allows for examining data trends across time.
